@@ -27,16 +27,16 @@ public class PlayerController : MonoBehaviour
         }else if(Input.GetKey(KeyCode.D)){
             rb.AddForce(new Vector2(Speed * 15, transform.position.y));
         }else if(Input.GetKey(KeyCode.W) && !isJumping){
-            rb.AddForce(new Vector2(transform.position.x, Jump * 100), ForceMode2D.Force);
+            rb.AddForce(new Vector2(transform.position.x, Jump * 130), ForceMode2D.Force);
             isJumping = true;
-        }else if(((Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.A))) && !isJumping){
-            rb.AddForce(new Vector2(-Speed * 15, Jump * 100), ForceMode2D.Force);
+        }else if(Input.GetKey(KeyCode.Q) && !isJumping){
+            rb.AddForce(new Vector2(-Speed * 90, Jump * 130), ForceMode2D.Force);
             isJumping = true;
-        }else if(((Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W)) || (Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.D))) && !isJumping){
-            rb.AddForce(new Vector2(Speed * 15, Jump * 100), ForceMode2D.Impulse);
+        }else if(Input.GetKey(KeyCode.E) && !isJumping){
+            rb.AddForce(new Vector2(Speed * 90, Jump * 130), ForceMode2D.Impulse);
             isJumping = true;
         }else if(Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.X)){
-            rb.AddForce(new Vector2(Speed * 100, transform.position.y));
+            rb.AddForce(new Vector2(Speed * 100, transform.position.y), ForceMode2D.Impulse);
         }
     }
 
