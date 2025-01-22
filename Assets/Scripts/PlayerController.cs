@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(new Vector2(-Speed * 90, Jump * 130), ForceMode2D.Force);
             isJumping = true;
         }else if(Input.GetKey(KeyCode.E) && !isJumping){
-            rb.AddForce(new Vector2(Speed * 90, Jump * 130), ForceMode2D.Impulse);
+            rb.AddForce(new Vector2(Speed * 90, Jump * 130), ForceMode2D.Force);
             isJumping = true;
         }else if(Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.X)){
             rb.AddForce(new Vector2(Speed * 100, transform.position.y), ForceMode2D.Impulse);
