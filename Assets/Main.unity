@@ -296,10 +296,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 14768285}
-  tr: {fileID: 0}
+  tr: {fileID: 14768290}
   isJumping: 0
-  Speed: 2
-  Jump: 2.5
+  Speed: 2.18
+  Jump: 8
   canDash: 1
   dashForce: 20
 --- !u!96 &14768290
